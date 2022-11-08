@@ -28,7 +28,7 @@ const Services = () => {
                 }
             </div>
             <div className='mx-auto'>
-            <Link to="/servicesall"><button className="btn btn-error ">See All</button></Link>
+            <Link to="/servicessall"><button className="btn btn-error ">See All</button></Link>
             </div>
 
         </div>

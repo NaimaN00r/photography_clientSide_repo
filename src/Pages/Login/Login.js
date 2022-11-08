@@ -1,13 +1,26 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import { FaGoogle,} from "react-icons/fa";
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
-    const { login } = useContext(AuthContext);
+    const { login,providerLogin } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
     const from = location.state?.from?.pathname || '/';
+
+
+    const googleProvider = new GoogleAuthProvider()
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
+    }
 
     const handleLogin = event => {
         event.preventDefault();
@@ -49,7 +62,7 @@ const Login = () => {
         <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleLogin} className="card-body">
+            <form onSubmit={handleLogin} className="card-body pb-0">
             <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -68,8 +81,14 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Login" />
                         </div>
+                        <div className='flex flex-col items-center'>
+                            <p className='text-center'>OR login with</p>
+                            
+                            <button className="btn btn-outline m-2 " onClick={handleGoogleSignIn}  variant="outline-dark"> <FaGoogle></FaGoogle></button>
+                        </div>
+                        
                     </form>
-                    <p className='text-center'>New to Capture <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
+                    <p className='text-center'>Need an account?<Link className='text-orange-600 font-bold ' to="/signup">Sign Up</Link> </p>
           </div>
         </div>
       </div>

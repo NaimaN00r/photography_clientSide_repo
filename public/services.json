@@ -8,22 +8,24 @@
         "description": "One main form of product photography is product-only imagery shot straight on. Commonly used for product listings in online stores like Amazon or Etsy, these photos are usually taken with a simple white background to limit distractions. Product-only images capture the details of the subject, such as size, silhouette, and color. These specifics help consumers find exactly what they’re looking for when shopping online. Before diving into your product shots, make sure you connect with your client and find out exactly what they’re looking for. Are there specific angles of the product they need to get? Does the label need to be visible in every shot? Planning makes perfect, so gather the info you need before setting up your photoshoot.",
         "facility": [
             {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+                "name": "PHOTOGRAPHIC PRODUCTION ",
+                "details": "My specialty is the photographic and audiovisual record of capturing the good side of a product, capturing the essence of each essence,If you are interested let me know."
             },
             {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ]
+                "name2": "WORKSHOPS",
+                "details2":[
+                    {
+                        "Workshop": "Product Photography - Basics" ,
+                        "details3" :"Introduction to Product  Photography. Content: Learn how to use your camera in manual mode and know the differences between aperture, shutter speed and ISO. How should you plan your field work experience to photograph products and which is the best approach to product storytelling?" 
+                    } ,
+                    {
+                        "Workshop2": "Product Photography - Advanced" ,
+                        "details4" :"Introduction to Product  Photography. Content: Learn how to use your camera in manual mode and know the differences between aperture, shutter speed and ISO. How should you plan your field work experience to photograph products and which is the best approach to product storytelling?" 
+                    } 
+
+                ]
+    }
+]
     },
     {
         
@@ -34,22 +36,24 @@
         "description": "You do need a photographer to capture moments for each and every ceremony, be it a large scale ceremony or a small and intimate home ceremony. You will always look back at those pictures and will relive those precious moments.Yay! Congratulations brides! You will now have your dream professional wedding photography and that too in your budget. Be it a destination wedding or a pre-wedding shoot you can find a plethora of photographers only at WedMeGood.",
         "facility": [
             {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+                "name": "PHOTOGRAPHIC PRODUCTION ",
+                "details": "My specialty is the photographic and audiovisual record of bride and groom, capturing the essence of two people, exploring beautiful landscapes, exotic birds  such as wild cats and their prey. I use creative techniques from tracking techniques of former hunters to new digital technologies like heat detection.If you want to know more about my work or are in interested in developing a photographic project for a specific conservation area, let me know."
             },
             {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ]
+                "name2": "WORKSHOPS",
+                "details2":[
+                    {
+                        "Workshop": "Weeding Photography - Basics" ,
+                        "details3" :"Introduction to Weeding Photography. Content: Learn how to use your camera in manual mode and know the differences between aperture, shutter speed and ISO. How should you plan your field work experience to photograph a weeding and which is the best approach to weeding storytelling?" 
+                    } ,
+                    {
+                        "Workshop2": "Weeding Photography - Advanced" ,
+                        "details4" :"Introduction to Weeding Photography. Content: Learn how to use your camera in manual mode and know the differences between aperture, shutter speed and ISO. How should you plan your field work experience to photograph a weeding and which is the best approach to weeding storytelling?" 
+                    } 
+
+                ]
+    }
+]
     },
     {
         
@@ -60,22 +64,24 @@
         "description": "Editorial fashion photography and street fashion photography are quite similar. The main difference is that editorial photography features models and celebrities wearing the current fashion trends. In contrast, street photography focuses on capturing the core of what is popular among the general public.But in the end, fashion photography isn't about them. It's all about the clothing. Setting your models up into poses that create movement in the clothing, such as twirls, jumps and even running, lets the viewer see how the garments move and what it's like to live in the clothing.",
         "facility": [
             {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+                "name": "PHOTOGRAPHIC PRODUCTION & SCIENTIFIC DISSEMINATION",
+                "details": "My specialty is the photographic and audiovisual record of fashion and style, capturing the essence of each fashion, exploring beautiful landscapes,  I use creative techniques from tracking techniques of former hunters to new digital technologies like heat detection.If you want to know more about my work or are in interested in developing a photographic project for a specific conservation area, let me know."
             },
             {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ]
+                "name2": "WORKSHOPS",
+                "details2":[
+                    {
+                        "Workshop": "Fashion Photography - Basics" ,
+                        "details3" :"Introduction to Fashion Photography. Content: Learn how to use your camera in manual mode and know the differences between aperture, shutter speed and ISO. How should you plan your field work experience to photograph Fashions and which is the best approach to Fashion storytelling?" 
+                    } ,
+                    {
+                        "Workshop2": "Fashion Photography - Advanced" ,
+                        "details4" :"Introduction to Fashion Photography. Content: Learn how to use your camera in manual mode and know the differences between aperture, shutter speed and ISO. How should you plan your field work experience to photograph Fashion and which is the best approach toFashion storytelling?" 
+                    } 
+
+                ]
+    }
+]
     },
     {
       
@@ -86,48 +92,52 @@
         "description": "The name of the game in wildlife photography—whether you’re trying to capture a herd of elephants on the Serengeti Plains or squirrels in your backyard—is patience. Wild animals are going to do what they’re going to do. Unfortunately, you can’t ask them to look this way, do something cute, or stand where the light is better. You have to be there, and ready, when they decide to look cute or do something interesting. Be prepared to wait, and wait, and wait—it takes a long time to get good wildlife shots, even longer to make great ones. But it’s not wasted time. The longer you spend with an animal or a group of animals, the better you get to know them and their habits. You get to see the personalities of different individuals, and you’ll get to the point where you can anticipate what they might do at a particular time of day or in a certain situation. Knowing which cubs are more playful or in which spot a male likes to lie up will help you get your images.",
         "facility": [
             {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+                "name": "PHOTOGRAPHIC PRODUCTION & SCIENTIFIC DISSEMINATION",
+                "details": "My specialty is the photographic and audiovisual record of fauna and flora, capturing the essence of each region, exploring beautiful landscapes, exotic birds and even the most frightened nocturnal animals such as wild cats and their prey. I use creative techniques from tracking techniques of former hunters to new digital technologies like heat detection.If you want to know more about my work or are in interested in developing a photographic project for a specific conservation area, let me know."
             },
             {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ]
+                "name2": "WORKSHOPS",
+                "details2":[
+                    {
+                        "Workshop": "Wildlife Photography - Basics" ,
+                        "details3" :"Introduction to Nature Photography. Content: Learn how to use your camera in manual mode and know the differences between aperture, shutter speed and ISO. How should you plan your field work experience to photograph wild animals and which is the best approach to wildlife storytelling?" 
+                    } ,
+                    {
+                        "Workshop2": "Wildlife Photography - Advanced" ,
+                        "details4" :"Introduction to Nature Photography. Content: Learn how to use your camera in manual mode and know the differences between aperture, shutter speed and ISO. How should you plan your field work experience to photograph wild animals and which is the best approach to wildlife storytelling?" 
+                    } 
+
+                ]
+    }
+]
     },
     {
        
         "service_id": "03",
-        "title": "Newborn Photography",
+        "title": "NewBorn Baby Photography",
         "img": "https://www.mattcramerphotography.com/wp-content/uploads/2016/10/18-4819-pp_gallery/newbornphotographerlosangeles_1260%28pp_w768_h562%29.jpg",
         "price": "30.00",
         "description": "Newborn portraiture is a take on portrait photography. Only the subjects are often less than two weeks old. Newborn portraits are about capturing this beautiful moment before the child grows up. Soon enough they will start asking for pocket money and borrow the car.The great thing is, you will have parents who can act as your assistants, holding and posing the baby. They can also make them laugh, and put them back to sleep.This doesn’t mean you shouldn’t invest in a few pieces of equipment to help this process.",
         "facility": [
             {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+                "name": "PHOTOGRAPHIC PRODUCTION & SCIENTIFIC DISSEMINATION",
+                "details": "My specialty is the photographic and audiovisual record of newborn babies, capturing the essence of each baby, exploring beautiful landscapes, . I use creative techniques from tracking techniques of former hunters to new digital technologies like heat detection.If you want to know more about my work or are in interested in developing a photographic project for a specific conservation area, let me know."
             },
             {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ]
+                "name2": "WORKSHOPS",
+                "details2":[
+                    {
+                        "Workshop": "NewBorn Baby Photography - Basics" ,
+                        "details3" :"Introduction to NewBorn Baby Photography. Content: Learn how to use your camera in manual mode and know the differences between aperture, shutter speed and ISO. How should you plan your field work experience to photograph wild animals and which is the best approach to wildlife storytelling?" 
+                    } ,
+                    {
+                        "Workshop2": "NewBorn Baby - Advanced" ,
+                        "details4" :"Introduction to NewBorn Baby Photography. Content: Learn how to use your camera in manual mode and know the differences between aperture, shutter speed and ISO. How should you plan your field work experience to photograph wild animals and which is the best approach to wildlife storytelling?" 
+                    } 
+
+                ]
+    }
+]
     },
     {
       
@@ -138,21 +148,23 @@
         "description": "When I set out on my journey and took my photography from a hobby to a business five years ago, no one was really talking about lifestyle photography. These days, lifestyle photography is trending. The desire to capture natural, relaxed images is being embraced now more than ever. Before I even knew what lifestyle photography meant, I would go into people’s homes and film them as naturally as possible. By having conversations with people, I discovered that I could make them almost ‘forget’ the camera and think of me more like a friend, sister or play date.  My goal of every session was to tell a story from start to finish – their story.",
         "facility": [
             {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+                "name": "PHOTOGRAPHIC PRODUCTION & SCIENTIFIC DISSEMINATION",
+                "details": "My specialty is the photographic and audiovisual record of Lifestyle, capturing the essence of each region, exploring beautiful landscapes. I use creative techniques from tracking techniques of former hunters to new digital technologies like heat detection.If you want to know more about my work or are in interested in developing a photographic project for a specific conservation area, let me know."
             },
             {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ]
+                "name2": "WORKSHOPS",
+                "details2":[
+                    {
+                        "Workshop": "Lifestyle Photography - Basics" ,
+                        "details3" :"Introduction to Nature Photography. Content: Learn how to use your camera in manual mode and know the differences between aperture, shutter speed and ISO. How should you plan your field work experience to photograph wild animals and which is the best approach to Lifestyle storytelling?" 
+                    } ,
+                    {
+                        "Workshop2": "Lifestyle Photography - Advanced" ,
+                        "details4" :"Introduction to Nature Photography. Content: Learn how to use your camera in manual mode and know the differences between aperture, shutter speed and ISO. How should you plan your field work experience to photograph wild animals and which is the best approach to Lifestyle storytelling?" 
+                    } 
+
+                ]
+    }
+]
     }
 ]
