@@ -15,7 +15,7 @@ const AddServices = () => {
           description:e.target.description.value,
         };
     
-        fetch("http://localhost:4500/services", {
+        fetch("https://photography-client-server.vercel.app/services", {
           method: "POST",
           headers: {
             "content-type": "application/json"
