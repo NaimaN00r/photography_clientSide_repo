@@ -5,7 +5,7 @@ import { FaGoogle,} from "react-icons/fa";
 import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
-    const { login,providerLogin } = useContext(AuthContext);
+    const { login,providerLogin,loading } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -21,6 +21,15 @@ const Login = () => {
             })
             .catch(error => console.error(error))
     }
+      
+    if(loading) {
+        return <button type="button" class="bg-indigo-500 ..." disabled>
+        <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
+        </svg>
+        Processing...
+      </button>
+    }
+    
 
     const handleLogin = event => {
         event.preventDefault();
@@ -40,20 +49,20 @@ const Login = () => {
                 console.log(currentUser);
 
                 // get jwt token
-                // fetch('http://localhost:5000/jwt', {
-                //     method: 'POST',
-                //     headers: {
-                //         'content-type': 'application/json'
-                //     },
-                //     body: JSON.stringify(currentUser)
-                // })
-                //     .then(res => res.json())
-                //     .then(data => {
-                //         console.log(data);
-                //         // local storage is the easiest but not the best place to store jwt token
-                //         localStorage.setItem('genius-token', data.token);
-                //         navigate(from, { replace: true });
-                //     });
+                fetch('http://localhost:4500/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                       
+                        localStorage.setItem('genius-token', data.token);
+                        navigate(from, { replace: true });
+                    });
                 
             })
             .catch(error => console.log(error));
