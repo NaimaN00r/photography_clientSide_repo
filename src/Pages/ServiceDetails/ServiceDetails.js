@@ -91,7 +91,7 @@ const menuItems=<>
 const [feedbacks, setfeedback] = useState([]);
     
     useEffect( () =>{
-        fetch(`http://localhost:4500/reviews`)
+        fetch(`http://localhost:4500/reviews?service=${id}`)
         .then(res =>res.json())
         .then(data => setfeedback(data))
     },

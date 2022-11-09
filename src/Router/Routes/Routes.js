@@ -3,6 +3,7 @@ import AddServices from "../../Pages/AddServices/AddServices";
 import Blog from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
+import MyReviews from "../../Pages/MyReviews/MyReviews";
 import ServiceDetails from "../../Pages/ServiceDetails/ServiceDetails";
 import Servicesall from "../../Pages/Servicessall/Servicesall";
 import SignUp from "../../Pages/SignUp/SignUp";
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
                 element:<ServiceDetails></ServiceDetails>,
                 loader: ({ params }) => fetch(`https://photography-client-server.vercel.app/services/${params.id}`)
             },
+            {
+                path: '/myreview',
+                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
+              },
             {
                 path:'/blogs',
                 element:<Blog></Blog>
