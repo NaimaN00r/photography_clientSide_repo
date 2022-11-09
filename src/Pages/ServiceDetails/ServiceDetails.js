@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import Review from '../Review/Review';
 import ServiceDiv from '../ServiceDiv/ServiceDiv';
 
 const ServiceDetails = () => {
@@ -9,6 +10,7 @@ const {user}=useContext(AuthContext)
 
 
 const {title,facility,img,_id} = useLoaderData();
+    const id=_id;
     const {name,details}=facility[0];
     const {name2,details2}=facility[1];
     const {Workshop,details3}=details2[0];
@@ -86,13 +88,14 @@ const menuItems=<>
     }
 </>
 
-// const [feedbacks, setfeedback] = useState([]);
+const [feedbacks, setfeedback] = useState([]);
     
-//     useEffect( () =>{
-//         fetch('https://photography-client-server.vercel.app/services')
-//         .then(res =>res.json())
-//         .then(data => setfeedback(data))
-//     }, []);
+    useEffect( () =>{
+        fetch(`http://localhost:4500/reviews`)
+        .then(res =>res.json())
+        .then(data => setfeedback(data))
+    },
+     []);
 
     
 
@@ -124,6 +127,12 @@ const menuItems=<>
         </div>
        <div>
        <h1>Review Section</h1>
+       <div className='flex lg:flex-col-2 sm:flex-col-1 '>
+       {
+        
+        feedbacks.map(feedback=><Review key={feedback._id} feedback={feedback}></Review>)
+      }
+       </div>
       
 
      
