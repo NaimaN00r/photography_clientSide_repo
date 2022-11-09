@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 
 const MyReviewRow = ({ view, handleDelete, handleStatusUpdate }) => {
-    const { _id, serviceName, phone, customer, price, service, status } = view;
-    const [orderService, setOrderService] = useState({})
+    const { _id, serviceName, review,service,name} = view;
+    // const [orderService, setOrderService] = useState({})
 
-    useEffect(() => {
-        fetch(`http://localhost:5000/services/${service}`)
-            .then(res => res.json())
-            .then(data => setOrderService(data));
-    }, [service])
+    // useEffect(() => {
+    //     fetch(`http://localhost:5000/services/${service}`)
+    //         .then(res => res.json())
+    //         .then(data => setOrderService(data));
+    // }, [service])
+
+
+    
 
     
 
@@ -19,7 +22,7 @@ const MyReviewRow = ({ view, handleDelete, handleStatusUpdate }) => {
                     <button onClick={() => handleDelete(_id)} className='btn btn-ghost'>X</button>
                 </label>
             </th>
-            <td>
+            {/* <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
                         <div className="rounded w-24 h-24">
@@ -29,21 +32,28 @@ const MyReviewRow = ({ view, handleDelete, handleStatusUpdate }) => {
                         </div>
                     </div>
                     <div>
-                        <div className="font-bold">{customer}</div>
+                        <div className="font-bold">{serviceName}</div>
                         <div className="text-sm opacity-50">{phone}</div>
                     </div>
                 </div>
-            </td>
+            </td> */}
             <td>
                 {serviceName}
                 <br />
-                <span className="badge badge-ghost badge-sm">${price}</span>
+                
             </td>
-            <td>Purple</td>
+            <td>
+                {review}
+                <br />
+                {/* <span className="badge badge-ghost badge-sm">{review}</span> */}
+            </td>
+            <td>{name}</td>
             <th>
                 <button 
                 onClick={() => handleStatusUpdate(_id)}
-                className="btn btn-ghost btn-xs">{status ? status : 'pending'}</button>
+                className="btn btn-ghost btn-xs">{
+                // status ? status : 'pending'
+                }</button>
             </th>
         </tr>
     );

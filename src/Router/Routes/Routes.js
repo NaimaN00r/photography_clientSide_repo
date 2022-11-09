@@ -44,7 +44,7 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`https://photography-client-server.vercel.app/services/${params.id}`)
             },
             {
-                path: '/myreview',
+                path: '/myreviews',
                 element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
               },
             {

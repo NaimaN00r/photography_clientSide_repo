@@ -28,6 +28,7 @@ const handlePlaceOrder = event => {
 
     const reviews = {
         service: _id,
+        serviceName:title,
         email:user.email,
         name:user.displayName,
         img:user.photoURL,
@@ -95,7 +96,7 @@ const [feedbacks, setfeedback] = useState([]);
         .then(res =>res.json())
         .then(data => setfeedback(data))
     },
-     []);
+     [id]);
 
     
 
