@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
 
 const MyReviewRow = ({ view, handleDelete, handleStatusUpdate }) => {
     const { _id, serviceName, review,service,name} = view;
-    // const [orderService, setOrderService] = useState({})
-
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/services/${service}`)
-    //         .then(res => res.json())
-    //         .then(data => setOrderService(data));
-    // }, [service])
+   
 
 
     
 
     
+    const navigate = useNavigate();
+    const handleEdit = (id) => {
+      navigate(`reviews/edit/${id}`)
+    }
 
     return (
         <tr>
@@ -22,21 +21,6 @@ const MyReviewRow = ({ view, handleDelete, handleStatusUpdate }) => {
                     <button onClick={() => handleDelete(_id)} className='btn btn-ghost'>X</button>
                 </label>
             </th>
-            {/* <td>
-                <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                        <div className="rounded w-24 h-24">
-                            {
-                                orderService?.img && 
-                                <img src={orderService.img} alt="Avatar Tailwind CSS Component" />}
-                        </div>
-                    </div>
-                    <div>
-                        <div className="font-bold">{serviceName}</div>
-                        <div className="text-sm opacity-50">{phone}</div>
-                    </div>
-                </div>
-            </td> */}
             <td>
                 {serviceName}
                 <br />
@@ -45,15 +29,14 @@ const MyReviewRow = ({ view, handleDelete, handleStatusUpdate }) => {
             <td>
                 {review}
                 <br />
-                {/* <span className="badge badge-ghost badge-sm">{review}</span> */}
+               
             </td>
             <td>{name}</td>
             <th>
                 <button 
-                onClick={() => handleStatusUpdate(_id)}
-                className="btn btn-ghost btn-xs">{
-                // status ? status : 'pending'
-                }</button>
+                onClick={() => handleEdit(_id)}
+                className="btn btn-ghost btn-xs">
+                Edit</button>
             </th>
         </tr>
     );

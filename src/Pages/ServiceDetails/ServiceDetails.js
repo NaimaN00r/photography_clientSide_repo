@@ -3,10 +3,11 @@ import { useLoaderData } from 'react-router';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import Review from '../Review/Review';
-import ServiceDiv from '../ServiceDiv/ServiceDiv';
 
 const ServiceDetails = () => {
-const {user}=useContext(AuthContext)
+const {user}=useContext(AuthContext);
+const [refresh, setRefresh] = useState(false);
+
 
 
 const {title,facility,img,_id} = useLoaderData();
@@ -20,10 +21,8 @@ const {title,facility,img,_id} = useLoaderData();
 const handlePlaceOrder = event => {
     event.preventDefault();
     console.log(user)
+    const time=new Date().getTime();
     const form = event.target;
-    // const name = `${form.firstName.value} ${form.lastName.value}`;
-    // const email = user?.email || 'unregistered';
-    // const phone = form.phone.value;
     const review = form.review.value;
 
     const reviews = {
@@ -32,15 +31,9 @@ const handlePlaceOrder = event => {
         email:user.email,
         name:user.displayName,
         img:user.photoURL,
+        time,
         review
     }
-
-    // if(phone.length > 10){
-    //     alert('Phone number should be 10 characters or longer')
-    // }
-    // else{
-
-    // }
 
     fetch('http://localhost:4500/reviews', {
         method: 'POST',
@@ -54,6 +47,7 @@ const handlePlaceOrder = event => {
         .then(data => {
             console.log(data)
             if(data.acknowledged){
+                setRefresh(!refresh);
                 alert('Review added successfully')
                 form.reset();
                 
@@ -70,15 +64,8 @@ const menuItems=<>
         user?.email ?
             <>
             <form onSubmit={handlePlaceOrder}>
-                <h2 className="text-4xl">You are about to add review: {title}</h2>
-                {/* <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                    <input name="firstName" type="text" placeholder="Review text" className="input input-ghost w-full  input-bordered" /> */}
-                     {/* <input name="lastName" type="text" placeholder="Last Name" className="input input-ghost w-full  input-bordered" />
-                    <input name="phone" type="text" placeholder="Your Phone" className="input input-ghost w-full  input-bordered" required />
-                    <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost w-full  input-bordered" readOnly />
-                </div> */} 
+                <h2 className="text-4xl m-5"> Add review to : {title}</h2>
                 <textarea name="review" className="textarea textarea-bordered h-24 w-full" placeholder="Your Message" required></textarea>
-
                 <input className='btn' type="submit" value="Add" />
             </form>
                 
@@ -96,7 +83,7 @@ const [feedbacks, setfeedback] = useState([]);
         .then(res =>res.json())
         .then(data => setfeedback(data))
     },
-     [id]);
+     [refresh]);
 
     
 
@@ -127,8 +114,8 @@ const [feedbacks, setfeedback] = useState([]);
             
         </div>
        <div>
-       <h1>Review Section</h1>
-       <div className='flex lg:flex-col-2 sm:flex-col-1 '>
+       <h2 className="text-5xl font-semibold p-5 text-center">Review Section</h2>
+       <div className='grid grid-cols-4 gap-4 mb-5'>
        {
         
         feedbacks.map(feedback=><Review key={feedback._id} feedback={feedback}></Review>)
@@ -139,7 +126,6 @@ const [feedbacks, setfeedback] = useState([]);
      
         
        </div>
-       {/* <button className='btn btn-warning' onClick={addreview()}>Add Review</button> */}
        {menuItems}
         </div>
 

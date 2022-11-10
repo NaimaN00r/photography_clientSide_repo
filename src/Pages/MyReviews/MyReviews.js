@@ -33,7 +33,7 @@ const MyReviews = () => {
     }, [user?.email])
 
     const handleDelete = id => {
-        const proceed = window.confirm('Are you sure, you want to cancel this order');
+        const proceed = window.confirm('Are you sure, you want to delet this review');
         if (proceed) {
             fetch(`http://localhost:4500/reviews/${id}`, {
                 method: 'DELETE',
@@ -52,29 +52,26 @@ const MyReviews = () => {
                 })
         }
     }
-
-    const handleStatusUpdate = id => {
-        fetch(`http://localhost:5000/reviews/${id}`, {
-            method: 'PATCH',
-            headers: {
-                'content-type': 'application/json',
-                authorization: `Bearer ${localStorage.getItem('genius-token')}`
-            },
-            body: JSON.stringify({ status: 'Approved' })
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.modifiedCount > 0) {
-                    const remaining = review.filter(odr => odr._id !== id);
-                    const approving = review.find(odr => odr._id === id);
-                    approving.status = 'Approved'
-
-                    const newReview = [approving, ...remaining];
-                    setReview(newReview);
-                }
-            })
-    }
+    // const handleEdit = id => {
+    //     const proceed = window.confirm('Are you sure, you want to cancel this order');
+    //     if (proceed) {
+    //         fetch(`http://localhost:4500/reviews/${id}`, {
+    //             method: 'DELETE',
+    //             headers: {
+    //                 authorization: `Bearer ${localStorage.getItem('genius-token')}`
+    //             }
+    //         })
+    //             .then(res => res.json())
+    //             .then(data => {
+    //                 if (data.deletedCount > 0) {
+    //                     alert('deleted successfully');
+    //                     const remaining = review.filter(odr => odr._id !== id);
+                        
+    //                     setReview(remaining);
+    //                 }
+    //             })
+    //     }
+    // }
 
    
 
@@ -104,7 +101,7 @@ const MyReviews = () => {
                                 key={view._id}
                                 view={view}
                                 handleDelete={handleDelete}
-                                handleStatusUpdate={handleStatusUpdate}
+                           
                             ></MyReviewRow>)
                         }
                     </tbody>

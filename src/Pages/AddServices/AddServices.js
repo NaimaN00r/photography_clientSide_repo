@@ -8,14 +8,15 @@ const AddServices = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const form=e.target;
         const service = {
-          title: e.target.title.value,
-          price: parseInt(e.target.price.value),
-          img: e.target.image.value,
-          description:e.target.description.value,
+          title: form.title.value,
+          price: parseInt(form.price.value),
+          img: form.image.value,
+          description:form.description.value,
         };
     
-        fetch("https://photography-client-server.vercel.app/services", {
+        fetch("http://localhost:4500/services", {
           method: "POST",
           headers: {
             "content-type": "application/json"
@@ -25,9 +26,10 @@ const AddServices = () => {
         .then(data => {
             console.log(data)
           if(data.success){
-           toast.success(data.message)
+          form.reset();
+           alert(data.message)
           } else {
-            toast.error(data.error);
+            alert(data.error);
           }
         })
         .catch(err => {
