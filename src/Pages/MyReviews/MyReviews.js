@@ -81,7 +81,7 @@ const MyReviews = () => {
     const getValue=(value)=>{
         if(value===0){
             return(
-                <p className='text-center border-2 bg-pink-200 m-6'>No reviews were added</p>
+                <p className='text-center border-2 bg-grey-200 m-6 h-10 pt-8 pb-12'>No reviews were added</p>
             )
         }
         else{
