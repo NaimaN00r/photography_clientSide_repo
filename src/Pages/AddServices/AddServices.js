@@ -2,8 +2,10 @@ import React, { useContext } from 'react';
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useDocumentTitle from '../../useDocumentTitle';
 
 const AddServices = () => {
+  
     const { user } = useContext(AuthContext);
 
     const handleSubmit = (e) => {
@@ -16,7 +18,7 @@ const AddServices = () => {
           description:form.description.value,
         };
     
-        fetch("http://localhost:4500/services", {
+        fetch("https://photography-client-server-naiman00r.vercel.app/services", {
           method: "POST",
           headers: {
             "content-type": "application/json"

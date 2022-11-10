@@ -29,7 +29,7 @@ const EditProduct = () => {
       review: e.target.review.value,
     }
 
-    fetch(`http://localhost:4500/reviews/${id}`, {
+    fetch(`https://photography-client-server-naiman00r.vercel.app/reviews/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json"

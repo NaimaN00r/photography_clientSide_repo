@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import { FaGoogle,} from "react-icons/fa";
 import { GoogleAuthProvider } from 'firebase/auth';
+import { Spinner } from 'react-bootstrap';
 
 const Login = () => {
     const { login,providerLogin,loading } = useContext(AuthContext);
@@ -23,6 +24,7 @@ const Login = () => {
     }
       
     if(loading) {
+        // <Spinner animation="border" variant="success" />
         return <button type="button" class="bg-indigo-500 ..." disabled>
         <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
         </svg>
@@ -49,7 +51,7 @@ const Login = () => {
                 console.log(currentUser);
 
                 // get jwt token
-                fetch('https://photography-client-server.vercel.app/jwt', {
+                fetch('https://photography-client-server-naiman00r.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

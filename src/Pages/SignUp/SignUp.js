@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
@@ -6,6 +7,7 @@ const SignUp = () => {
     const {createUser,loading} = useContext(AuthContext);
 
     if(loading) {
+        // <Spinner animation="border" variant="success" />
         return <button type="button" class="bg-indigo-500 ..." disabled>
         <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
         </svg>

@@ -1,12 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { useLoaderData } from 'react-router';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import Review from '../Review/Review';
 
 const ServiceDetails = () => {
-const {user}=useContext(AuthContext);
+const {user,loading}=useContext(AuthContext);
 const [refresh, setRefresh] = useState(false);
+
 
 
 
@@ -35,7 +37,7 @@ const handlePlaceOrder = event => {
         review
     }
 
-    fetch('http://localhost:4500/reviews', {
+    fetch('https://photography-client-server-naiman00r.vercel.app/reviews', {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
@@ -79,7 +81,7 @@ const menuItems=<>
 const [feedbacks, setfeedback] = useState([]);
     
     useEffect( () =>{
-        fetch(`http://localhost:4500/reviews?service=${id}`)
+        fetch(`https://photography-client-server-naiman00r.vercel.app/reviews?service=${id}`)
         .then(res =>res.json())
         .then(data => setfeedback(data))
     },

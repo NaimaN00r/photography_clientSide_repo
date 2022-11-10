@@ -13,7 +13,7 @@ const MyReviews = () => {
     
 
     useEffect(() => {
-        fetch(`http://localhost:4500/reviews?email=${user?.email}`, 
+        fetch(`https://photography-client-server-naiman00r.vercel.app/reviews?email=${user?.email}`, 
         {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('genius-token')}`
@@ -22,7 +22,7 @@ const MyReviews = () => {
         )
             .then(res => {
                 if (res.status === 401 || res.status === 403) {
-                    return logOut();
+                     logOut();
                 }
                 return res.json();
             })
@@ -35,7 +35,7 @@ const MyReviews = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delet this review');
         if (proceed) {
-            fetch(`http://localhost:4500/reviews/${id}`, {
+            fetch(`https://photography-client-server-naiman00r.vercel.app/reviews/${id}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('genius-token')}`
@@ -52,26 +52,7 @@ const MyReviews = () => {
                 })
         }
     }
-    // const handleEdit = id => {
-    //     const proceed = window.confirm('Are you sure, you want to cancel this order');
-    //     if (proceed) {
-    //         fetch(`http://localhost:4500/reviews/${id}`, {
-    //             method: 'DELETE',
-    //             headers: {
-    //                 authorization: `Bearer ${localStorage.getItem('genius-token')}`
-    //             }
-    //         })
-    //             .then(res => res.json())
-    //             .then(data => {
-    //                 if (data.deletedCount > 0) {
-    //                     alert('deleted successfully');
-    //                     const remaining = review.filter(odr => odr._id !== id);
-                        
-    //                     setReview(remaining);
-    //                 }
-    //             })
-    //     }
-    // }
+   
 
    
 

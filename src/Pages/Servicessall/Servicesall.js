@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import ServiceCard from '../Shared/ServiceCard/ServiceCard';
 
@@ -7,18 +8,20 @@ const Servicesall = () => {
     const {loading} = useContext(AuthContext);
     
     useEffect( () =>{
-        fetch('https://photography-client-server.vercel.app/allservices')
+        fetch('https://photography-client-server-naiman00r.vercel.app/allservices')
         .then(res =>res.json())
         .then(data => setServices(data))
     }, []);
 
     if(loading) {
+        // <Spinner animation="border" variant="success" />
         return <button type="button" class="bg-indigo-500 ..." disabled>
         <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
         </svg>
         Processing...
       </button>
     }
+
 
     return (
        <div>
